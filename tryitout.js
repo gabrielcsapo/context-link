@@ -1,17 +1,17 @@
 const { name, description } = require('./package.json');
 
 module.exports = {
-  title: name,
-  description: description,
-  nav: {
-    Source: 'https://github.com/gabrielcsapo/context-link',
-    Docs: './code/index.html'
-  },
-  body: [{
-    type: 'code',
-    title: 'Find',
-    subtitle: 'Finding the given text in the given arrays',
-    value: `
+	title: name,
+	description: description,
+	nav: {
+		Source: 'https://github.com/gabrielcsapo/context-link',
+		Docs: './code/index.html'
+	},
+	body: [{
+		type: 'code',
+		title: 'Find',
+		subtitle: 'Finding the given text in the given arrays',
+		value: `
 var ContextLink = require('context-link');
 var entries = [
 	'I walked down alone Sunday after church   To the place where John has been cutting treesTo see for myself about the birch up   He said I could have to bush my peas.',
@@ -31,12 +31,12 @@ found['the'].forEach((entry, i) => {
 });
 console.html(\`<ul>\${entriesExpanded.map((p) => \`<li>\${p.join(' ')}</li>\`).join('')}</ul>\`);
     `
-  }],
-  footer: `
+	}],
+	footer: `
     <div class="text-black">Made with ☕️ by <a href="http://www.gabrielcsapo.com">@gabrielcsapo</a></div>
   `,
-  output: './docs',
-  externals: [
-    './dist/context-link.min.js'
-  ]
+	output: './docs',
+	externals: [
+		'./dist/context-link.min.js'
+	]
 };
