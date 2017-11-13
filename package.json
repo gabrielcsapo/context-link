@@ -1,0 +1,39 @@
+{
+  "name": "context-link",
+  "version": "0.0.1",
+  "description": "📖 link contextual based text entries",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielcsapo/context-link.git"
+  },
+  "author": "Gabriel J. Csapo <gabecsapo@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/gabrielcsapo/context-link/issues"
+  },
+  "homepage": "https://gabrielcsapo.com/context-link",
+  "scripts": {
+    "test": "tape test",
+    "lint": "eslint .",
+    "build": "browserify -r ./index.js:context-link -t [ brfs ] -t [ babelify --presets [ env ]]  > dist/context-link.js && minify dist/context-link.js --out-file dist/context-link.min.js",
+    "coverage": "tap test --coverage --coverage-report=lcov",
+    "generate-docs": "tryitout; jsdoc -c jsdoc.json"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-minify": "^0.2.0",
+    "babel-preset-env": "^1.6.1",
+    "babelify": "^8.0.0",
+    "brfs": "^1.4.3",
+    "browserify": "^14.5.0",
+    "docdash": "^0.4.0",
+    "eslint": "^4.11.0",
+    "jsdoc": "^3.5.5",
+    "tap": "^10.7.3",
+    "tape": "^4.8.0",
+    "tryitout": "^1.1.0",
+    "uglifyjs": "^2.4.11"
+  }
+}
